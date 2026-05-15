@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Músicas favoritas organizadas em um player interno do Random Website.">
+    <link rel="icon" href="assets/random-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Website - Músicas</title>
+</head>
+<body data-page="musicas">
+    <header class="cabeca">
+        <a class="brand" href="index.html" aria-label="Voltar para o início">
+            <img src="assets/random-logo.svg" alt="" class="brand-logo">
+            <span>RANDOM WEBSITE</span>
+        </a>
+        <p>Músicas favoritas, organizadas em um player interno.</p>
+    </header>
+
+    <nav class="menu" aria-label="Menu principal">
+        <a href="index.html" data-nav="inicio">Início</a>
+        <a href="sobre.html" data-nav="sobre">Sobre</a>
+        <a href="musicas.html" data-nav="musicas">Músicas</a>
+        <a href="jogos.html" data-nav="jogos">Jogos</a>
+        <a href="videos.html" data-nav="videos">Vídeos</a>
+        <a href="contato.html" data-nav="contato">Contato</a>
+    </nav>
+
+    <main class="conteudo wide">
+        <section class="page-intro">
+            <p class="eyebrow">Player</p>
+            <h1>Músicas favoritas</h1>
+            <p>
+                Escolha uma faixa, veja a capa, acompanhe o tempo e use os modos de
+                reprodução para ouvir a música inteira ou pular direto para o trecho
+                mais marcante.
+            </p>
+        </section>
+
+        <section class="music-player-shell" aria-label="Player interno de músicas">
+            <aside class="music-queue" aria-label="Lista de faixas">
+                <button class="song-row active" type="button" data-track-index="0">
+                    <img src="assets/music-covers/notion.jpg" alt="">
+                    <span><strong>Notion</strong><small>The Rare Occasions</small></span>
+                </button>
+
+                <button class="song-row" type="button" data-track-index="1">
+                    <img src="assets/music-covers/505.jpg" alt="">
+                    <span><strong>505</strong><small>Arctic Monkeys</small></span>
+                </button>
+
+                <button class="song-row" type="button" data-track-index="2">
+                    <img src="assets/music-covers/worlds-smallest-violin.jpg" alt="">
+                    <span><strong>World's Smallest Violin</strong><small>AJR</small></span>
+                </button>
+
+                <button class="song-row" type="button" data-track-index="3">
+                    <img src="assets/music-covers/from-the-start.jpg" alt="">
+                    <span><strong>From The Start</strong><small>Good Kid</small></span>
+                </button>
+
+                <button class="song-row" type="button" data-track-index="4">
+                    <img src="assets/music-covers/let-it-happen.jpg" alt="">
+                    <span><strong>Let It Happen</strong><small>Tame Impala</small></span>
+                </button>
+
+                <button class="song-row" type="button" data-track-index="5">
+                    <img src="assets/music-covers/baby-blue.jpg" alt="">
+                    <span><strong>Baby Blue</strong><small>Badfinger</small></span>
+                </button>
+
+                <button class="song-row" type="button" data-track-index="6">
+                    <img src="assets/music-covers/free-bird.jpg" alt="">
+                    <span><strong>Free Bird</strong><small>Lynyrd Skynyrd</small></span>
+                </button>
+
+                <button class="song-row" type="button" data-track-index="7">
+                    <img src="assets/music-covers/ceu-azul.jpg" alt="">
+                    <span><strong>Céu Azul</strong><small>Charlie Brown Jr.</small></span>
+                </button>
+
+                <button class="song-row" type="button" data-track-index="8">
+                    <img src="assets/music-covers/papo-reto.jpg" alt="">
+                    <span><strong>Papo Reto</strong><small>Charlie Brown Jr.</small></span>
+                </button>
+
+                <button class="song-row" type="button" data-track-index="9">
+                    <img src="assets/music-covers/dont-worry.jpg" alt="">
+                    <span><strong>Don't Worry</strong><small>Madcon, Ray Dalton</small></span>
+                </button>
+            </aside>
+
+            <section class="now-playing" aria-labelledby="current-track-title">
+                <div class="now-playing-top">
+                    <img class="player-cover" id="player-cover" src="assets/music-covers/notion.jpg" alt="">
+                    <div>
+                        <p class="eyebrow" id="player-mode">Música inteira</p>
+                        <h2 id="current-track-title">Notion</h2>
+                        <p id="current-track-artist">The Rare Occasions</p>
+                    </div>
+                </div>
+
+                <div class="player-controls" aria-label="Controles do player">
+                    <button type="button" id="play-full">Música inteira</button>
+                    <button type="button" id="play-viral">Ir para trecho marcante</button>
+                    <button type="button" id="play-pause">Play</button>
+                    <button type="button" id="reset-track">Reset</button>
+                    <button type="button" id="loop-track" aria-pressed="false">Loop: desligado</button>
+                </div>
+
+                <div class="timeline-wrap">
+                    <input type="range" id="track-timeline" min="0" max="100" value="0" aria-label="Linha do tempo da música">
+                    <div class="time-row">
+                        <span id="current-time">0:00</span>
+                        <span id="duration-time">0:00</span>
+                    </div>
+                </div>
+
+                <p class="player-status" id="player-status" role="status">
+                    Selecione uma faixa e aperte play.
+                </p>
+
+                <audio id="site-audio" preload="metadata"></audio>
+            </section>
+        </section>
+    </main>
+
+    <footer class="barra">
+        <p>&copy; Site feito por Vítor - 1B T.I - UNASP 2026</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="music-database.js"></script>
+    <script src="music-player.js"></script>
+    <script src="site-events.js"></script>
+</body>
+</html>
+

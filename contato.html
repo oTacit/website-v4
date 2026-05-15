@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contato e links do site pessoal de Vítor.">
+    <link rel="icon" href="assets/random-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Website - Contato</title>
+</head>
+<body data-page="contato">
+    <header class="cabeca">
+        <a class="brand" href="index.html" aria-label="Voltar para o início">
+            <img src="assets/random-logo.svg" alt="" class="brand-logo">
+            <span>RANDOM WEBSITE</span>
+        </a>
+        <p>Um ponto simples para links, email e mensagens do site.</p>
+    </header>
+
+    <nav class="menu" aria-label="Menu principal">
+        <a href="index.html" data-nav="inicio">Início</a>
+        <a href="sobre.html" data-nav="sobre">Sobre</a>
+        <a href="musicas.html" data-nav="musicas">Músicas</a>
+        <a href="jogos.html" data-nav="jogos">Jogos</a>
+        <a href="videos.html" data-nav="videos">Vídeos</a>
+        <a href="contato.html" data-nav="contato">Contato</a>
+    </nav>
+
+    <main class="conteudo">
+        <section class="page-intro">
+            <p class="eyebrow">Contato</p>
+            <h1>Links principais</h1>
+            <p>
+                Esta página fica reservada para formas de contato e links importantes.
+                O email fica visível como amostra e o formulário abaixo abre o email
+                da pessoa com a mensagem pronta para enviar para mim.
+            </p>
+        </section>
+
+        <section class="contact-list" aria-label="Links de contato">
+            <a class="contact-row" href="mailto:vitormgervazoni@gmail.com">
+                <span>Email</span>
+                <strong>vitormgervazoni@gmail.com</strong>
+            </a>
+
+            <a class="contact-row" href="https://github.com/oTacit" target="_blank" rel="noopener noreferrer">
+                <span>GitHub</span>
+                <strong>oTacit (Tacit)</strong>
+            </a>
+        </section>
+
+        <section class="message-panel" aria-labelledby="message-title">
+            <div class="section-title">
+                <p class="eyebrow">Mensagens</p>
+                <h2 id="message-title">Enviar mensagem para mim</h2>
+                <p>Preencha os campos e confirme para abrir seu email com tudo pronto.</p>
+            </div>
+
+            <form class="message-form" id="message-form">
+                <label>
+                    Seu nome
+                    <input type="text" name="name" placeholder="Nome de quem está enviando" required autocomplete="name">
+                </label>
+
+                <label>
+                    Mensagem
+                    <textarea name="message" rows="5" placeholder="Escreva a mensagem aqui..." required></textarea>
+                </label>
+
+                <button type="submit">Abrir email para enviar</button>
+                <p class="form-status" id="form-status" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="barra">
+        <p>&copy; Site feito por Vítor - 1B T.I - UNASP 2026</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="contact.js"></script>
+    <script src="site-events.js"></script>
+</body>
+</html>
+

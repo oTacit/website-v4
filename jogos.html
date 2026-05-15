@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Top 3 jogos favoritos, com imagens e resumos sem spoiler.">
+    <link rel="icon" href="assets/random-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Website - Jogos</title>
+</head>
+<body data-page="jogos">
+    <header class="cabeca">
+        <a class="brand" href="index.html" aria-label="Voltar para o início">
+            <img src="assets/random-logo.svg" alt="" class="brand-logo">
+            <span>RANDOM WEBSITE</span>
+        </a>
+        <p>Top jogos favoritos em formato de galeria.</p>
+    </header>
+
+    <nav class="menu" aria-label="Menu principal">
+        <a href="index.html" data-nav="inicio">Início</a>
+        <a href="sobre.html" data-nav="sobre">Sobre</a>
+        <a href="musicas.html" data-nav="musicas">Músicas</a>
+        <a href="jogos.html" data-nav="jogos">Jogos</a>
+        <a href="videos.html" data-nav="videos">Vídeos</a>
+        <a href="contato.html" data-nav="contato">Contato</a>
+    </nav>
+
+    <main class="conteudo wide">
+        <section class="page-intro">
+            <p class="eyebrow">Top 3</p>
+            <h1>Jogos favoritos</h1>
+            <p>
+                Cards com imagem, resumo curto e ranking revelado com mais destaque ao
+                passar o mouse. Sem spoilers, só uma ideia do clima de cada jogo.
+            </p>
+        </section>
+
+        <section class="rank-grid" aria-label="Top 3 jogos favoritos">
+            <a class="rank-card" href="https://store.steampowered.com/app/1888930/The_Last_of_Us_Part_I/" target="_blank" rel="noopener noreferrer">
+                <div class="rank-media">
+                    <img src="assets/media/the-last-of-us-part-i.jpg" alt="Capa de The Last of Us Part I">
+                    <span class="rank-badge">Top 1</span>
+                </div>
+                <div class="rank-body">
+                    <h2>The Last of Us</h2>
+                    <p class="rank-note">Parte I e Parte II, com capa da Parte I.</p>
+                    <p>Um jogo de ação, exploração e sobrevivência em que cada recurso importa. Mistura momentos de furtividade, combate tenso e uma história muito focada na relação entre os personagens.</p>
+                </div>
+            </a>
+
+            <a class="rank-card" href="https://store.steampowered.com/app/1174180/Red_Dead_Redemption_2/" target="_blank" rel="noopener noreferrer">
+                <div class="rank-media">
+                    <img src="assets/media/red-dead-redemption-2.jpg" alt="Capa de Red Dead Redemption 2">
+                    <span class="rank-badge">Top 2</span>
+                </div>
+                <div class="rank-body">
+                    <h2>Red Dead Redemption 2</h2>
+                    <p class="rank-note">Mundo aberto e história de faroeste.</p>
+                    <p>Um faroeste de mundo aberto com ritmo cinematográfico, viagens longas, missões bem dirigidas e muita liberdade para explorar cidades, acampamentos, natureza, caça e encontros pelo mapa.</p>
+                </div>
+            </a>
+
+            <a class="rank-card" href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer">
+                <div class="rank-media">
+                    <img src="assets/media/minecraft.png" alt="Arte oficial de Minecraft">
+                    <span class="rank-badge">Top 3</span>
+                </div>
+                <div class="rank-body">
+                    <h2>Minecraft</h2>
+                    <p class="rank-note">Criatividade, sobrevivência e liberdade.</p>
+                    <p>Um sandbox de blocos onde dá para minerar, construir, sobreviver, automatizar coisas, jogar em servidores e transformar ideias simples em mundos enormes, no modo criativo ou sobrevivência.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="barra">
+        <p>&copy; Site feito por Vítor - 1B T.I - UNASP 2026</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="site-events.js"></script>
+</body>
+</html>
+

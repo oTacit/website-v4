@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site pessoal de Vítor, estudante de T.I., com projetos, gostos pessoais e favoritos.">
+    <link rel="icon" href="assets/random-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Website</title>
+</head>
+<body data-page="inicio">
+    <header class="cabeca">
+        <a class="brand" href="index.html" aria-label="Voltar para o início">
+            <img src="assets/random-logo.svg" alt="" class="brand-logo">
+            <span>RANDOM WEBSITE</span>
+        </a>
+        <p>Um espaço pessoal para projetos, gostos e testes bem cuidados.</p>
+    </header>
+
+    <nav class="menu" aria-label="Menu principal">
+        <a href="index.html" data-nav="inicio">Início</a>
+        <a href="sobre.html" data-nav="sobre">Sobre</a>
+        <a href="musicas.html" data-nav="musicas">Músicas</a>
+        <a href="jogos.html" data-nav="jogos">Jogos</a>
+        <a href="videos.html" data-nav="videos">Vídeos</a>
+        <a href="contato.html" data-nav="contato">Contato</a>
+    </nav>
+
+    <main class="conteudo page-home">
+        <section class="home-hero">
+            <p class="eyebrow">Início</p>
+            <h1>Bem-vindo ao Random Website.</h1>
+            <p>
+                Este website vai funcionar como um espaço pessoal para organizar
+                minhas informações, gostos, projetos, músicas, jogos, séries, filmes
+                e outras coisas que eu quiser adicionar com o tempo.
+            </p>
+            <p>
+                A página inicial é só uma explicação rápida do site em si. A página
+                Sobre fica reservada para falar melhor sobre mim, meus gostos e minha
+                trajetória.
+            </p>
+        </section>
+
+        <section class="quick-grid" aria-label="Categorias do site">
+            <a class="quick-card" href="sobre.html">
+                <span class="quick-kicker">Perfil</span>
+                <strong>Sobre</strong>
+                <p>Minha apresentação, estudos, projetos e informações em janelas organizadas.</p>
+            </a>
+
+            <a class="quick-card" href="musicas.html">
+                <span class="quick-kicker">Player</span>
+                <strong>Músicas</strong>
+                <p>Uma seleção de faixas favoritas com capas, áudio local, tempo marcado e controles internos.</p>
+            </a>
+
+            <a class="quick-card" href="jogos.html">
+                <span class="quick-kicker">Top 3</span>
+                <strong>Jogos</strong>
+                <p>Meus jogos favoritos em cards com imagem, ranking e resumo sem spoiler.</p>
+            </a>
+
+            <a class="quick-card" href="videos.html">
+                <span class="quick-kicker">Top 3</span>
+                <strong>Vídeos</strong>
+                <p>Séries e filme favoritos com capas, ranking e descrições curtas.</p>
+            </a>
+        </section>
+    </main>
+
+    <footer class="barra">
+        <p>&copy; Site feito por Vítor - 1B T.I - UNASP 2026</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="site-events.js"></script>
+</body>
+</html>
+

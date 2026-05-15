@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Séries e filmes favoritos em uma galeria visual sem spoilers.">
+    <link rel="icon" href="assets/random-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Website - Vídeos</title>
+</head>
+<body data-page="videos">
+    <header class="cabeca">
+        <a class="brand" href="index.html" aria-label="Voltar para o início">
+            <img src="assets/random-logo.svg" alt="" class="brand-logo">
+            <span>RANDOM WEBSITE</span>
+        </a>
+        <p>Séries e filmes favoritos em cards organizados.</p>
+    </header>
+
+    <nav class="menu" aria-label="Menu principal">
+        <a href="index.html" data-nav="inicio">Início</a>
+        <a href="sobre.html" data-nav="sobre">Sobre</a>
+        <a href="musicas.html" data-nav="musicas">Músicas</a>
+        <a href="jogos.html" data-nav="jogos">Jogos</a>
+        <a href="videos.html" data-nav="videos">Vídeos</a>
+        <a href="contato.html" data-nav="contato">Contato</a>
+    </nav>
+
+    <main class="conteudo wide">
+        <section class="page-intro">
+            <p class="eyebrow">Top 3</p>
+            <h1>Séries e filmes favoritos</h1>
+            <p>
+                O mesmo esquema visual dos jogos: imagem, ranking e resumo breve,
+                sem revelar acontecimentos importantes.
+            </p>
+        </section>
+
+        <section class="rank-grid" aria-label="Top 3 séries e filmes favoritos">
+            <a class="rank-card" href="https://www.netflix.com/title/70143836" target="_blank" rel="noopener noreferrer">
+                <div class="rank-media poster">
+                    <img src="assets/media/breaking-bad-original.jpg" alt="Walter White e Jesse Pinkman em Breaking Bad">
+                    <span class="rank-badge">Top 1</span>
+                </div>
+                <div class="rank-body">
+                    <h2>Breaking Bad</h2>
+                    <p class="rank-note">Série de drama criminal.</p>
+                    <p>Um drama criminal sobre um professor de química que entra em um mundo perigoso de escolhas cada vez mais pesadas. A série trabalha tensão, consequência e transformação de personagem com muito cuidado.</p>
+                </div>
+            </a>
+
+            <a class="rank-card" href="https://www.netflix.com/title/80021955" target="_blank" rel="noopener noreferrer">
+                <div class="rank-media poster">
+                    <img src="assets/media/better-call-saul.jpg" alt="Capa de Better Call Saul">
+                    <span class="rank-badge">Top 2</span>
+                </div>
+                <div class="rank-body">
+                    <h2>Better Call Saul</h2>
+                    <p class="rank-note">Drama com humor seco e muito detalhe.</p>
+                    <p>Um drama jurídico e criminal de construção lenta, cheio de diálogos inteligentes, golpes criativos e decisões morais difíceis. É uma série mais detalhista, com foco forte em personagem.</p>
+                </div>
+            </a>
+
+            <a class="rank-card" href="https://www.netflix.com/title/81078819" target="_blank" rel="noopener noreferrer">
+                <div class="rank-media poster">
+                    <img src="assets/media/el-camino.jpg" alt="Poster de El Camino: A Breaking Bad Movie">
+                    <span class="rank-badge">Top 3</span>
+                </div>
+                <div class="rank-body">
+                    <h2>Breaking Bad: El Camino</h2>
+                    <p class="rank-note">Filme ligado ao universo da série.</p>
+                    <p>Um filme com clima mais contido e cinematográfico, ligado diretamente ao universo da série. Ele mantém a tensão e acompanha uma jornada pessoal sem entregar spoilers aqui.</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="barra">
+        <p>&copy; Site feito por Vítor - 1B T.I - UNASP 2026</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="site-events.js"></script>
+</body>
+</html>
+

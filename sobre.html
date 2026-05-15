@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sobre Vítor, estudante de T.I., seus projetos, estudos e gostos pessoais.">
+    <link rel="icon" href="assets/random-logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Website - Sobre</title>
+</head>
+<body data-page="sobre">
+    <header class="cabeca">
+        <a class="brand" href="index.html" aria-label="Voltar para o início">
+            <img src="assets/random-logo.svg" alt="" class="brand-logo">
+            <span>RANDOM WEBSITE</span>
+        </a>
+        <p>Sobre mim, meus estudos, minha história e um pouco do que eu gosto.</p>
+    </header>
+
+    <nav class="menu" aria-label="Menu principal">
+        <a href="index.html" data-nav="inicio">Início</a>
+        <a href="sobre.html" data-nav="sobre">Sobre</a>
+        <a href="musicas.html" data-nav="musicas">Músicas</a>
+        <a href="jogos.html" data-nav="jogos">Jogos</a>
+        <a href="videos.html" data-nav="videos">Vídeos</a>
+        <a href="contato.html" data-nav="contato">Contato</a>
+    </nav>
+
+    <main class="conteudo page-sobre">
+        <section class="page-intro">
+            <p class="eyebrow">Sobre</p>
+            <h1>Sobre mim e meus gostos.</h1>
+            <p>
+                Olá, visitante. Nesse website você verá trabalhos e testes de um
+                estudante de T.I., além de alguns gostos pessoais e pequenas ideias
+                que surgem no caminho.
+            </p>
+            <p>
+                Já deixo um aviso honesto: estou evoluindo, então algumas coisas aqui
+                podem começar simples. Mesmo assim, quero que cada parte fique cada vez
+                mais bem organizada, legível e profissional.
+            </p>
+            <p>
+                Eu sei que <em>HTML</em> não é uma linguagem de programação, mas gosto
+                de usar "programador" como uma forma simples de falar sobre essa fase
+                de aprendizado. Se você chegou aqui pelo meu
+                <a class="text-link" href="https://github.com/oTacit" target="_blank" rel="noopener noreferrer">GitHub</a>,
+                obrigado pela curiosidade.
+            </p>
+        </section>
+
+        <section class="text-block">
+            <h2>Quem sou</h2>
+            <p>
+                Meu nome é Vítor, sou católico e tinha 15 anos na data em que criei
+                este site. Moro no interior de São Paulo, em Águas de Lindóia, perto
+                de Campinas, e estudo na UNASP de Engenheiro Coelho.
+            </p>
+            <p>
+                Tenho interesse nessa área desde 2016. Em 2021 comecei a ter um
+                envolvimento maior com códigos e, em 2026, entrei em um colegial
+                técnico de T.I. para estudar isso com mais seriedade.
+            </p>
+        </section>
+
+        <section class="text-block">
+            <h2>Um pouco da ideia</h2>
+            <p>
+                Este site funciona como uma vitrine pessoal: projetos recentes, testes
+                de interface, referências que eu gosto e sinais da minha evolução na
+                área de T.I. A ideia não é parecer perfeito desde o primeiro dia, mas
+                melhorar com capricho em cada versão.
+            </p>
+            <p>
+                Fique livre para navegar pelas categorias. As páginas de músicas, jogos
+                e vídeos foram organizadas para mostrar favoritos de um jeito bonito,
+                sem spoilers e sem bagunça visual.
+            </p>
+        </section>
+
+        <section class="info-grid" aria-label="Mais informações">
+            <button class="info-card" type="button" data-modal-title="Estudos em T.I." data-modal-body="Estudo no colegial técnico de T.I. da UNASP de Engenheiro Coelho e estou construindo base em HTML, CSS, JavaScript, lógica, organização de código e boas práticas de interface.">
+                <span>01</span>
+                <strong>Estudos</strong>
+                <p>O que estou aprendendo agora.</p>
+            </button>
+
+            <button class="info-card" type="button" data-modal-title="Projetos recentes" data-modal-body="Meus projetos recentes ficam no GitHub e mostram minha evolução aos poucos: cada ajuste, teste e refatoração conta como parte do processo.">
+                <span>02</span>
+                <strong>Projetos</strong>
+                <p>Onde a prática aparece.</p>
+            </button>
+
+            <button class="info-card" type="button" data-modal-title="Gostos pessoais" data-modal-body="Gosto de organizar minhas referências em categorias, como músicas, jogos, séries e filmes. Com o tempo, quero adicionar mais favoritos e deixar tudo ainda mais completo.">
+                <span>03</span>
+                <strong>Gostos</strong>
+                <p>Referências que fazem parte do site.</p>
+            </button>
+
+            <button class="info-card" type="button" data-modal-title="Linha do tempo" data-modal-body="Interesse pela área desde 2016, primeiros contatos mais fortes com códigos em 2021 e entrada no colegial técnico de T.I. em 2026.">
+                <span>04</span>
+                <strong>Trajetória</strong>
+                <p>Como cheguei até aqui.</p>
+            </button>
+        </section>
+    </main>
+
+    <div class="modal-backdrop" id="info-modal" hidden>
+        <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" type="button" aria-label="Fechar">x</button>
+            <p class="eyebrow">Informação</p>
+            <h2 id="modal-title"></h2>
+            <p id="modal-body"></p>
+        </section>
+    </div>
+
+    <footer class="barra">
+        <p>&copy; Site feito por Vítor - 1B T.I - UNASP 2026</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="modal.js"></script>
+    <script src="site-events.js"></script>
+</body>
+</html>
+
