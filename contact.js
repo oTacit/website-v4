@@ -1,4 +1,8 @@
 (function () {
+    if (window.randomWebsiteAudio) {
+        return;
+    }
+
     const form = document.getElementById("message-form");
     const status = document.getElementById("form-status");
     const destination = "vitormgervazoni@gmail.com";

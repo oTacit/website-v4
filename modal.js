@@ -1,4 +1,8 @@
 (function () {
+    if (window.randomWebsiteAudio) {
+        return;
+    }
+
     const modal = document.getElementById("info-modal");
 
     if (!modal) {
