@@ -609,13 +609,66 @@
     }
 
     function initCursorLight() {
-        const glow = document.createElement("div");
-        glow.className = "cursor-spotlight";
-        document.body.appendChild(glow);
+        if (document.querySelector(".cyan-fireflies")) {
+            return;
+        }
+
+        const field = document.createElement("div");
+        field.className = "cyan-fireflies";
+        field.setAttribute("aria-hidden", "true");
+
+        for (let index = 0; index < 82; index += 1) {
+            const firefly = document.createElement("span");
+            firefly.className = "cyan-firefly";
+            firefly.style.setProperty("--x", ((index * 17) % 100) + "%");
+            firefly.style.setProperty("--y", ((index * 29) % 100) + "%");
+            firefly.style.setProperty("--move-x", (((index % 9) - 4) * 22) + "px");
+            firefly.style.setProperty("--alt-x", ((((index % 9) - 4) * -22)) + "px");
+            firefly.style.setProperty("--move-y", (((index % 7) - 3) * 20) + "px");
+            firefly.style.setProperty("--size", (2 + (index % 6)) + "px");
+            firefly.style.setProperty("--duration", (7 + (index % 9)) + "s");
+            firefly.style.setProperty("--delay", (-index * 0.32) + "s");
+            field.appendChild(firefly);
+        }
+
+        document.body.appendChild(field);
+
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            return;
+        }
+
+        let lastTrailAt = 0;
 
         document.addEventListener("pointermove", function (event) {
-            document.documentElement.style.setProperty("--mouse-x", event.clientX + "px");
-            document.documentElement.style.setProperty("--mouse-y", event.clientY + "px");
+            const now = Date.now();
+
+            if (now - lastTrailAt < 34) {
+                return;
+            }
+
+            lastTrailAt = now;
+
+            for (let index = 0; index < 2; index += 1) {
+                const spark = document.createElement("span");
+                spark.className = "cursor-firefly";
+                spark.style.left = (event.clientX + ((index * 9) - 4)) + "px";
+                spark.style.top = (event.clientY + ((index * -7) + 3)) + "px";
+                spark.style.setProperty("--trail-x", ((((now + index) % 9) - 4) * 8) + "px");
+                spark.style.setProperty("--trail-y", (-24 - ((now + index * 11) % 22)) + "px");
+                field.appendChild(spark);
+
+                spark.addEventListener("animationend", function () {
+                    spark.remove();
+                }, { once: true });
+
+                window.setTimeout(function () {
+                    spark.remove();
+                }, 1350);
+            }
+
+            Array.from(field.querySelectorAll(".cursor-firefly")).slice(0, -42).forEach(function (spark) {
+                spark.remove();
+            });
         }, { passive: true });
     }
 
